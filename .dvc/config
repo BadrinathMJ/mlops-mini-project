@@ -1,0 +1,6 @@
+[core]
+    remote = mayurremote
+['remote "myremote"']
+    url = C:\Users\msi-pc\AppData\Local\Temp
+['remote "mayurremote"']
+    url = C:\Users\msi-pc\AppData\Local\Temp\lor
