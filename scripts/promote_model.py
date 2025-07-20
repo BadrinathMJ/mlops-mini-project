@@ -13,7 +13,7 @@ def promote_model():
     os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
     dagshub_url = "https://dagshub.com"
-    repo_owner = "campusx-official"
+    repo_owner = "mjcode14"
     repo_name = "mlops-mini-project"
 
     # Set up MLflow tracking URI
@@ -26,8 +26,8 @@ def promote_model():
     latest_version_staging = client.get_latest_versions(model_name, stages=["Staging"])[0].version
 
     # Archive the current production model
-    # prod_versions = client.get_latest_versions(model_name, stages=["Production"])
-    prod_versions = client.set_registered_model_alias(name=model_name, alias="Production")
+    prod_versions = client.get_latest_versions(model_name, stages=["Production"])
+    # prod_versions = client.set_registered_model_alias(name=model_name, alias="Production")
     for version in prod_versions:
         client.transition_model_version_stage(
             name=model_name,
