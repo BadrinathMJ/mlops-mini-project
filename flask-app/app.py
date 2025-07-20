@@ -8,7 +8,7 @@ mlflow.set_tracking_uri('https://dagshub.com/mjcode14/mlops-mini-project.mlflow'
 dagshub.init(repo_owner='mjcode14', repo_name='mlops-mini-project', mlflow=True)
 
 model_name = "my_model"
-model_version = 2
+model_version = 3
 
 model_uri = f'models:/{model_name}/{model_version}'
 vectorizer = pickle.load(open('models/vectorizer.pkl', 'rb'))
@@ -37,4 +37,4 @@ def predict():
     return render_template('index.html', result=result[0])
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=True)
