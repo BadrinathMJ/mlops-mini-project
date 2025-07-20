@@ -27,7 +27,7 @@ def promote_model():
 
     # Archive the current production model
     # prod_versions = client.get_latest_versions(model_name, stages=["Production"])
-    prod_versions = client.set_registered_model_alias(name=model_name, alias="Production", version=version)
+    prod_versions = client.set_registered_model_alias(name=model_name, alias="Production")
     for version in prod_versions:
         client.transition_model_version_stage(
             name=model_name,
