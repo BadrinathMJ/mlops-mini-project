@@ -8,7 +8,7 @@ mlflow.set_tracking_uri('https://dagshub.com/mjcode14/mlops-mini-project.mlflow'
 dagshub.init(repo_owner='mjcode14', repo_name='mlops-mini-project', mlflow=True)
 
 model_name = "my_model"
-model_version = 3
+model_version = 5
 
 model_uri = f'models:/{model_name}/{model_version}'
 vectorizer = pickle.load(open('models/vectorizer.pkl', 'rb'))
