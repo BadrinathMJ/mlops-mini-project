@@ -78,8 +78,8 @@ jobs:
             aws configure set default.region us-east-1
             aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 496637883626.dkr.ecr.us-east-1.amazonaws.com
             docker pull 496637883626.dkr.ecr.us-east-1.amazonaws.com/mayur_ecr:latest
-            docker stop mayur-app || true
-            docker rm mayur-app || true
+            # docker stop mayur-app || true
+            # docker rm mayur-app || true
             docker run -d -p 80:5000 -e DAGSHUB_PAT=${{ secrets.DAGSHUB_PAT }} --name mayur-app 496637883626.dkr.ecr.us-east-1.amazonaws.com/mayur_ecr:latest
 
 
