@@ -63,7 +63,7 @@ jobs:
 
       - name: Push the image AWS ECR
         run: |
-          docker push 496637883626.dkr.ecr.us-east-1.amazonaws.com/mayur_ecr:latest
+          docker push 496637883626.dkr.ecr.us-east-1.amazonaws.com/mayur_ecr6:latest
 
       # Zip the required files
       - name: Zip files for deployment
