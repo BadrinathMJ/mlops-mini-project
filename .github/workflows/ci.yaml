@@ -55,11 +55,11 @@ jobs:
 
       - name: Build the docker image
         run: |
-          docker build -t mayur_ecr .
+          docker build -t mayur_ecr6 .
 
       - name: Tag the docker image
         run: |
-          docker tag mayur_ecr:latest 496637883626.dkr.ecr.us-east-1.amazonaws.com/mayur_ecr:latest
+          docker tag mayur_ecr:latest 496637883626.dkr.ecr.us-east-1.amazonaws.com/mayur_ecr6:latest
 
       - name: Push the image AWS ECR
         run: |
