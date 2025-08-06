@@ -6,9 +6,7 @@ files:
     destination: /home/ubuntu/app
 hooks: 
   BeforeInstall:
-    - location: deploy/scripts/cleanup.sh  # ⬅️ new script to remove existing file
-      timeout: 60
-      runas: ubuntu
+    
     - location: deploy/scripts/install_dependencies.sh
       timeout: 300
       runas: ubuntu
